@@ -1,0 +1,17 @@
+{
+  "name": "test-parcel-vue-ts-project",
+  "version": "1.0.0",
+  "description": "Тестовый проект с использованием Parcel, Vue, TypeScript",
+  "main": "public/index.html",
+  "scripts": {
+    "serve": "parcel serve ./public/index.html -d ./dist/ --public-url ./dist/ --open",
+    "watch": "parcel watch ./public/index.html -d ./dist/ --public-url ./dist/ --open",
+    "build": "parcel build ./src/index.html -d ./build/ --public-url .",
+    "clean": "rimraf ./.cache/ && rimraf ./dist/ && rimraf ./build/",
+    "test:unit": "jest --no-cache",
+    "test:coverage": "jest --no-cache --coverage"
+  },
+  "repository": "https://github.com/newbornfrontender/test-parcel-vue-ts-project.git",
+  "author": "Infant Frontender <newbornfrontender@gmail.com>",
+  "license": "MIT"
+}
