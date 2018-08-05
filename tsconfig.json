@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "newLine": "CRLF",
+    "baseUrl": "./",
+    "outDir": "./lib/",
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./typings/"
+    ],
+    "lib": [
+      "es2017",
+      "dom",
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*",
+      ],
+    },
+    "strict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules",
+  ],
+}
