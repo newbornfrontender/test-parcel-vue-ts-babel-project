@@ -5,7 +5,7 @@
 
 <h2 align="center">Основные команды</h2>
 
-<h3 align="center">Установка зависимостей</h3>
+### Установка зависимостей
 
 ```bash
 $ yarn install
@@ -16,19 +16,19 @@ $ yarn install
 $ yarn
 ```
 
-<h3 align="center">Компиляция шаблона с hot-reload для developnemt сборки</h3>
+### Компиляция шаблона с hot-reload для developnemt сборки
 
 ```bash
 $ yarn serve
 ```
 
-<h3 align="center">Проверка кода и исправление</h3>
+### Проверка кода и исправление
 
 ```bash
 $ yarn lint
 ```
 
-<h3 align="center">Компиляция шаблона с минификацией для production сборки</h3>
+### Компиляция шаблона с минификацией для production сборки
 
 ```bash
 $ yarn build
