@@ -4,12 +4,14 @@
   "description": "Тестовый шаблон с использованием Parcel, Vue, TypeScript и Babel",
   "main": "./src/index.ts",
   "scripts": {
+    "clean": "rm -rf ./.cache/*  && rm -rf ./lib/* && rm -rf ./dist/*",
     "tslint:check": "tslint-config-prettier-check ./tslint.json",
-    "tslint:lint": "tslint \"./{tests,src}/**/*.{ts,tsx}\"",
+    "tslint:lint": "tslint \"./{test,src}/**/*.{ts,tsx}\"",
     "lint": "yarn tslint:check && yarn tslint:lint",
-    "clean": "rm -rf ./.cache && rm -rf ./dist && rm -rf ./lib",
     "preserve": "yarn clean",
     "serve": "parcel ./public/index.html --no-source-maps --port 2018 --open",
+    "test:unit": "",
+    "tests": "yarn test:unit",
     "prebuild": "yarn clean && yarn lint",
     "build": "parcel build ./public/index.html --public-url . --no-cache --experimental-scope-hoisting"
   },

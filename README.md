@@ -31,7 +31,7 @@ $ yarn lint
 
 ### Тесты
 
-Запуск всех тестов (unit, ...)
+> Запуск всех тестов. Доступные тесты: unit
 
 ```bash
 $ yarn tests
@@ -39,7 +39,7 @@ $ yarn tests
 
 #### Unit тесты
 
-> Jest
+> <a href="https://jestjs.io/">Jest</a> тест
 
 ```bash
 $ yarn test:unit
@@ -52,3 +52,11 @@ $ yarn build
 ```
 
 <h2 align="center">Вспомогательные команды</h2>
+
+### Очистка рабочих директорий
+
+> Рабочие директории: .cache, lib, dist
+
+```bash
+$ yarn clean
+```
