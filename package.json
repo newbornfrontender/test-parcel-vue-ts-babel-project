@@ -1,15 +1,16 @@
 {
-  "name": "test-parcel-vue-ts-babel-project",
+  "name": "test-parcel-vue-ts-babel-template",
   "version": "1.0.0",
-  "description": "Тестовый проект с использованием Parcel, Vue, TypeScript и Babel",
+  "description": "Тестовый шаблон с использованием Parcel, Vue, TypeScript и Babel",
   "main": "./src/index.ts",
   "scripts": {
-    "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "lint": "tslint \"./{tests,src}/**/*.{ts,tsx}\"",
+    "tslint:check": "tslint-config-prettier-check ./tslint.json",
+    "tslint:lint": "tslint \"./{tests,src}/**/*.{ts,tsx}\"",
+    "lint": "yarn tslint:check && yarn tslint:lint",
     "clean": "rm -rf ./.cache && rm -rf ./dist && rm -rf ./lib",
     "preserve": "yarn clean",
     "serve": "parcel ./public/index.html --no-source-maps --port 2018 --open",
-    "prebuild": "yarn clean",
+    "prebuild": "yarn clean && yarn lint",
     "build": "parcel build ./public/index.html --public-url . --no-cache --experimental-scope-hoisting"
   },
   "keywords": [
@@ -18,7 +19,7 @@
     "typescript",
     "babel"
   ],
-  "repository": "https://github.com/newbornfrontender/test-parcel-vue-ts-babel-project.git",
+  "repository": "https://github.com/newbornfrontender/test-parcel-vue-ts-babel-template.git",
   "author": "Infant Frontender <newbornfrontender@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -31,12 +32,10 @@
   },
   "devDependencies": {
     "@types/node": "^10.5.6",
-    "@vue/test-utils": "^1.0.0-beta.23",
     "node-sass": "^4.9.2",
     "parcel-bundler": "^1.9.7",
     "prettier": "1.14.0",
     "tslint": "^5.11.0",
-    "tslint-config-airbnb": "^5.9.2",
     "tslint-config-prettier": "^1.14.0",
     "typescript": "^3.0.1",
     "vue-template-compiler": "^2.5.17"
