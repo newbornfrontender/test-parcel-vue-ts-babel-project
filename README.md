@@ -1,5 +1,6 @@
 <h1 align="center">Test Parcel Vue TypeScript Babel template</h1>
-<p>Тестовый шаблон с использованием Parcel, Vue, TypeScript и Babel</p>
+
+Тестовый шаблон с использованием Parcel, Vue, TypeScript и Babel
 
 > Для комфортной работы советую установать <a href="https://yarnpkg.com/">Yarn</a>
 
