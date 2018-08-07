@@ -29,6 +29,22 @@ $ yarn serve
 $ yarn lint
 ```
 
+### Тесты
+
+Запуск всех тестов (unit, ...)
+
+```bash
+$ yarn tests
+```
+
+#### Unit тесты
+
+> Jest
+
+```bash
+$ yarn test:unit
+```
+
 ### Компиляция шаблона с минификацией для production сборки
 
 ```bash
