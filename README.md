@@ -1,8 +1,8 @@
 <h1 align="center">Test Parcel Vue TypeScript Babel template</h1>
 
-Тестовый шаблон с использованием Parcel, Vue, TypeScript и Babel
+Тестовый шаблон с использованием <a href="https://parceljs.org/">Parcel</a>, <a href="https://vuejs.org/index.html">Vue</a>, <a href="https://www.typescriptlang.org/">TypeScript</a> и <a href="https://babeljs.io/">Babel</a>
 
-> Для комфортной работы советую установать <a href="https://yarnpkg.com/">Yarn</a>
+> Для корректной работы шаблона советую установить <a href="https://yarnpkg.com/">Yarn</a>
 
 <h2 align="center">Основные команды</h2>
 
@@ -31,7 +31,7 @@ $ yarn lint
 
 ### Тесты
 
-> Запуск всех тестов. Доступные тесты: unit
+Запуск всех тестов. Доступные тесты: unit
 
 ```bash
 $ yarn tests
@@ -39,7 +39,7 @@ $ yarn tests
 
 #### Unit тесты
 
-> <a href="https://jestjs.io/">Jest</a> тест
+<a href="https://jestjs.io/">Jest</a> тест
 
 ```bash
 $ yarn test:unit
@@ -55,7 +55,7 @@ $ yarn build
 
 ### Очистка рабочих директорий
 
-> Рабочие директории: .cache, lib, dist
+Рабочие директории: .cache, lib, dist
 
 ```bash
 $ yarn clean
