@@ -4,33 +4,31 @@
     "module": "esnext",
     "target": "es5",
     "jsx": "preserve",
-    "declaration": true,
-    "declarationMap": true,
+    // "declaration": true,
+    // "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./dist/",
-    "removeComments": true,
-    "importHelpers": true,
+    "outDir": "./dist",
+    // "removeComments": true,
+    // "importHelpers": true,
     "lib": [
       "es2017",
       "dom",
     ],
-
     /* Strict Type-Checking Options */
     "alwaysStrict": true,
     "strict": true,
-
     /* Additional Checks */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noImplicitReturns": true,
+    // "noFallthroughCasesInSwitch": true,
     /* Module Resolution Options */
     "moduleResolution": "node",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "typeRoots": [
-      "./node_modules/@types/",
-      "./src/@types/"
+      "./node_modules/@types",
+      "./src/typings",
+      "./test/unit/jest/typings",
     ],
     "paths": {
       "@/*": [
@@ -39,14 +37,11 @@
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-
     /* Experimental Options */
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
     /* Advanced Options */
-    "declarationDir": "./lib/",
-
+    // "declarationDir": "./lib",
     /* Other */
     "newLine": "CRLF",
   },
@@ -54,6 +49,8 @@
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./src/**/*.vue",
+    "./test/**/*.ts",
+    "./test/**/*.tsx",
   ],
   "exclude": [
     "node_modules",
