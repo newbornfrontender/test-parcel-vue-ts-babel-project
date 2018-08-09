@@ -1,0 +1,6 @@
+{
+  "./{test,src}/**/*.{ts,tsx,vue}": [
+    "yarn prettier:write",
+    "git add"
+  ]
+}
