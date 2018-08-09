@@ -1,44 +1,29 @@
 <template>
   <div id="app">
-    <home
-      msg="Vue.js starter kit with Parcel + Typescript"
-    />
-    <ol>
-      <li
-        v-for="todo in todos"
-        v-bind:key = "todo.id"
-      >{{ todo.text }}</li>
-    </ol>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script lang="ts">
-'use strict';
-
-import { Component, Vue } from 'vue-property-decorator';
-import Home from './components/Home.vue';
-
-@Component({
-  data() {
-    return {
-      todos: [
-        { text: 'Изучить JavaScript' },
-        { text: 'Изучить Vue' },
-        { text: 'Создать что-нибудь классное' },
-      ],
-    };
-  },
-  components: {
-    Home,
-  },
-})
-export default class App extends Vue {}
-</script>
-
-<style>
+<style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
