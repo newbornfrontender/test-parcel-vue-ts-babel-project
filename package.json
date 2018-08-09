@@ -1,7 +1,7 @@
 {
-  "name": "test-parcel-vue-ts-babel-template",
+  "name": "test-parcel-vue-ts-template",
   "version": "1.0.0",
-  "description": "Тестовый шаблон с использованием Parcel, Vue, TypeScript и Babel",
+  "description": "Тестовый шаблон на Parcel с использованием Vue, TypeScript, а также TSLint, Prettier и т.п.",
   "main": "./src/index.ts",
   "scripts": {
     "clean": "rimraf ./{.cache,dist}/*",
@@ -21,11 +21,10 @@
     "parcel",
     "vue",
     "typescript",
-    "babel",
-    "prettier",
-    "tslint"
+    "tslint",
+    "prettier"
   ],
-  "repository": "https://github.com/newbornfrontender/test-parcel-vue-ts-babel-template.git",
+  "repository": "https://github.com/newbornfrontender/test-parcel-vue-ts-template.git",
   "author": "Infant Frontender <newbornfrontender@gmail.com>",
   "license": "MIT",
   "dependencies": {
