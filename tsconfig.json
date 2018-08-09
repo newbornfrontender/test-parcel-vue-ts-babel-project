@@ -7,15 +7,17 @@
     // "declaration": true,
     // "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    // "outDir": "./dist",
     // "removeComments": true,
-    // "importHelpers": true,
+    "importHelpers": true,
     "lib": [
-      "es2017",
+      "es2015",
       "dom",
+      "dom.iterable",
+      "scripthost"
     ],
     /* Strict Type-Checking Options */
-    "alwaysStrict": true,
+    // "alwaysStrict": true,
     "strict": true,
     /* Additional Checks */
     // "noUnusedLocals": true,
@@ -25,34 +27,37 @@
     /* Module Resolution Options */
     "moduleResolution": "node",
     "baseUrl": ".",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/typings",
-      "./test/unit/jest/typings",
-    ],
+    // "typeRoots": [
+    //   "./node_modules/@types",
+    //   "./src/typings",
+    //   "./test/unit/jest/typings"
+    // ],
     "paths": {
       "@/*": [
-        "./src/*",
-      ],
+        "src/*"
+      ]
     },
-    "allowSyntheticDefaultImports": true,
+    // "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     /* Experimental Options */
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    // "emitDecoratorMetadata": true,
     /* Advanced Options */
     // "declarationDir": "./lib",
     /* Other */
     "newLine": "CRLF",
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./src/**/*.vue",
     "./test/**/*.ts",
-    "./test/**/*.tsx",
+    "./test/**/*.tsx"
   ],
   "exclude": [
-    "node_modules",
-  ],
+    "node_modules"
+  ]
 }
