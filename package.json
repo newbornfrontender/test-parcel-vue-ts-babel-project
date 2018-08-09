@@ -4,14 +4,16 @@
   "description": "Тестовый шаблон с использованием Parcel, Vue, TypeScript и Babel",
   "main": "./src/index.ts",
   "scripts": {
-    "clean": "rm -rf ./.cache/*  && rm -rf ./lib/* && rm -rf ./dist/*",
-    "tslint:check": "tslint-config-prettier-check ./tslint.json",
-    "tslint:lint": "tslint \"./{test,src}/**/*.{ts,tsx}\"",
-    "lint": "yarn tslint:check && yarn tslint:lint",
+    "clean": "rimraf ./{.cache,dist}/*",
+    "prettier:check": "tslint-config-prettier-check ./tslint.json",
+    "prettier:watch": "onchange . -- prettier --write {{changed}}",
+    "prettier:write": "prettier ./{test,src}/**/*.{ts,tsx,vue} --write",
+    "tslint:fix": "tslint ./{test,src}/**/*.{ts,tsx} --fix",
+    "prelint": "yarn prettier:check && yarn prettier:write",
+    "lint": "yarn tslint:fix",
     "preserve": "yarn clean",
-    "serve": "parcel ./public/index.html --no-source-maps --port 2018 --open",
-    "test:unit": "",
-    "tests": "yarn test:unit",
+    "serve": "parcel ./public/index.html --no-source-maps --port 8080 --open",
+    "test": "",
     "prebuild": "yarn clean && yarn lint",
     "build": "parcel build ./public/index.html --public-url . --no-cache --experimental-scope-hoisting"
   },
@@ -19,7 +21,9 @@
     "parcel",
     "vue",
     "typescript",
-    "babel"
+    "babel",
+    "prettier",
+    "tslint"
   ],
   "repository": "https://github.com/newbornfrontender/test-parcel-vue-ts-babel-template.git",
   "author": "Infant Frontender <newbornfrontender@gmail.com>",
@@ -33,13 +37,17 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "@types/node": "^10.5.6",
+    "@types/node": "^10.5.7",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
     "node-sass": "^4.9.2",
+    "onchange": "^4.1.0",
     "parcel-bundler": "^1.9.7",
     "prettier": "1.14.0",
+    "rimraf": "^2.6.2",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.14.0",
-    "typescript": "^3.0.1",
+    "typescript": "^3.1.0-dev.20180807",
     "vue-template-compiler": "^2.5.17"
   }
 }
