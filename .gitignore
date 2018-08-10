@@ -4,3 +4,6 @@ node_modules/
 # Optional parcel directories
 .cache/
 dist/
+
+# Logs
+*.log
