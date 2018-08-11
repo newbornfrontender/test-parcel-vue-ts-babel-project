@@ -6,7 +6,8 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: '/testsite/',
+  // base: '/testsite/',
+  // base: '/Users/Admin/Documents/GitHub/test-parcel-vue-ts-template/dist/',
   routes: [
     {
       path: '/',
