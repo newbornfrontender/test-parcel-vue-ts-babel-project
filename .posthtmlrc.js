@@ -1,5 +1,9 @@
 'use strict';
 
+const posthtmlDoctype = require('posthtml-doctype')({
+  doctype: 'HTML 5',
+});
+
 const posthtmlBem = require('posthtml-bem')({
   elemPrefix: '__',
   modPrefix: '--',
@@ -12,9 +16,11 @@ const posthtmlHeadElements = require('posthtml-head-elements')({
 
 module.exports = {
   plugins: process.env.NODE_ENV === 'production' ? [
+    posthtmlDoctype,
     posthtmlHeadElements,
     posthtmlBem,
   ] : [
+    posthtmlDoctype,
     posthtmlHeadElements,
     posthtmlBem,
   ],

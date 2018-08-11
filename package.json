@@ -5,6 +5,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "clean": "rimraf ./{.cache,dist}/*",
+    "copy": "copyfiles --flat ./public/*.txt ./dist",
     "prettier:check": "tslint-config-prettier-check ./tslint.json",
     "prettier:watch": "onchange . -- prettier --write {{changed}}",
     "prettier:write": "prettier ./{test,src}/**/*.{ts,tsx,vue} --write",
@@ -14,9 +15,9 @@
     "preserve": "yarn clean",
     "serve": "parcel ./public/index.html --no-source-maps --port 8080 --open",
     "test": "",
-    "prebuild": "yarn clean && yarn lint",
-    "build": "parcel build ./public/index.html --public-url . --no-cache --experimental-scope-hoisting",
-    "make": "parcel build ./public/index.html --public-url ."
+    "prebuild": "yarn clean && yarn copy && yarn lint",
+    "build": "parcel build ./public/index.html --public-url . --no-cache",
+    "postbuild": "copyfiles ./report.html ./dist && rimraf ./report.html"
   },
   "keywords": [
     "parcel",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@types/node": "^10.5.7",
     "autoprefixer": "^9.1.0",
+    "copyfiles": "^2.0.0",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
     "node-sass": "^4.9.2",
@@ -48,6 +50,7 @@
     "postcss": "^7.0.2",
     "posthtml": "^0.11.3",
     "posthtml-bem": "^0.2.2",
+    "posthtml-doctype": "^1.1.1",
     "posthtml-head-elements": "^0.5.0",
     "prettier": "1.14.0",
     "rimraf": "^2.6.2",
